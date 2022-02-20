@@ -28,4 +28,18 @@ Object.keys(this._listado).forEach( key => {
 
 return listado;
  }
+ cargarTareasFromArray(datos = []){
+     datos.forEach(envio => {
+         this._listado[envio.id]=envio;
+     });
+ }
+
+ crearEnvio(dato){
+     const envio = new Tarea(datos);
+     this._listado[envio.id] = envio;
+ }
+
+}
+module.exports={
+    ListadoEnvios
 }
